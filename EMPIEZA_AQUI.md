@@ -1,10 +1,13 @@
 # Empieza aquí — HAPTIX
 
-Este paquete está listo para GitHub Desktop; incluye un historial Git dentro de la carpeta oculta `.git`.
+El repositorio **ya existe** en GitHub: https://github.com/Juanleon-19/HAPTIX
 
-1. Extrae el ZIP, abre GitHub Desktop y elige `File > Add local repository`.
-2. Selecciona la carpeta `HAPTIX` extraída.
-3. Usa `Publish repository`, introduce `HAPTIX` y mantén **Keep this code private**.
-4. Comprueba que aparece en la cuenta `Juanleon-19`.
+## Para consultar el trabajo experimental
+1. [Abrir protocolo de pruebas](protocolo/README.md).
+2. [Revisar ERM](protocolo/erm/README.md), [electroimán P25/11](protocolo/electromagnetico/README.md), [SMA](protocolo/sma/README.md) y [VR](protocolo/vr/README.md).
+3. Revisar [tareas abiertas](https://github.com/Juanleon-19/HAPTIX/issues) y documentación de [fuentes](docs/fuentes.md).
+4. El protocolo Excel maestro todavía debe importarse y auditarse: [Issue #1](https://github.com/Juanleon-19/HAPTIX/issues/1).
 
-No existe ningún remoto de GitHub creado por este paquete. Lee [docs/publicar.md](docs/publicar.md) para alternativas y comprobaciones.
+**La visibilidad es privada.** Para invitar colaboradores: Settings → Collaborators and teams / Collaborators. Para que todos puedan verlo, auditar contenido y cambiar visibilidad en Settings → General → Danger Zone → Change repository visibility.
+
+Si tienes una copia local en GitHub Desktop, usa **Fetch origin / Pull origin** para descargar actualizaciones; no vuelvas a usar Publish repository ni sobrescribas los cambios remotos con un ZIP antiguo.
