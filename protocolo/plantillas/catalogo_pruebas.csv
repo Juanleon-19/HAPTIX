@@ -1,7 +1,7 @@
 prueba_id,subsistema,tipo_prueba,objetivo,variable_principal,unidad,fuente_del_id,estado_evidencia,nota
 E-ERM-01,ERM,BANCO_ELECTRICO,Inspección resistencia y alimentación,R_motor/V_modulo,ohm/V,Registro gestor MATLAB,INCOMPLETA,Hay una corrida histórica con CH0 sin datos
 E-ERM-02,ERM,BANCO_ELECTRICO,Comunicación I2C e identificación,ID_modulo,-,Registro gestor MATLAB,NO_CONFORME,Intentos históricos con identidad no verificada o fallo canal
-E-ERM-03,ERM,BANCO_FUNCIONAL,Activación individual y repetibilidad,ciclos_por_canal,ciclos,Registro gestor MATLAB,EJECUTADA_SIN_AUDITAR,Verificar registros completos y resultados
+E-ERM-03,ERM,BANCO_FUNCIONAL,Activación individual y repetibilidad,ciclos_por_canal,ciclos,Registro gestor MATLAB,PLANIFICADA,Hay menú de ensayo pero no evidencia de aprobación verificada
 E-ERM-04,ERM,BANCO_ELECTRICO,Consigna RTP y medición eléctrica,corriente/A,A,Registro gestor MATLAB,PLANIFICADA,No afirmar prueba superada
 E-ERM-05,ERM,BANCO_FUNCIONAL,Patrones temporales,respuesta_temporal,ms,Registro gestor MATLAB,PLANIFICADA,Verificar instrumento y duración
 E-ERM-06,ERM,BANCO_FUNCIONAL,Cuatro motores simultáneos,canales_activados,-,Registro gestor MATLAB,PLANIFICADA,Verificar estado e integración
