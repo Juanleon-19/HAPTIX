@@ -1,1 +1,20 @@
-prueba_id,subsistema,objetivo,variable_entrada,variable_salida,unidad,instrumento,criterio_aceptacion,referencia_protocolo,estado
+prueba_id,subsistema,tipo_prueba,objetivo,variable_principal,unidad,fuente_del_id,estado_evidencia,nota
+E-ERM-01,ERM,BANCO_ELECTRICO,Inspección resistencia y alimentación,R_motor/V_modulo,ohm/V,Registro gestor MATLAB,INCOMPLETA,Hay una corrida histórica con CH0 sin datos
+E-ERM-02,ERM,BANCO_ELECTRICO,Comunicación I2C e identificación,ID_modulo,-,Registro gestor MATLAB,NO_CONFORME,Intentos históricos con identidad no verificada o fallo canal
+E-ERM-03,ERM,BANCO_FUNCIONAL,Activación individual y repetibilidad,ciclos_por_canal,ciclos,Registro gestor MATLAB,EJECUTADA_SIN_AUDITAR,Verificar registros completos y resultados
+E-ERM-04,ERM,BANCO_ELECTRICO,Consigna RTP y medición eléctrica,corriente/A,A,Registro gestor MATLAB,PLANIFICADA,No afirmar prueba superada
+E-ERM-05,ERM,BANCO_FUNCIONAL,Patrones temporales,respuesta_temporal,ms,Registro gestor MATLAB,PLANIFICADA,Verificar instrumento y duración
+E-ERM-06,ERM,BANCO_FUNCIONAL,Cuatro motores simultáneos,canales_activados,-,Registro gestor MATLAB,PLANIFICADA,Verificar estado e integración
+E-ERM-07,ERM,BANCO_ELECTRICO,Consumo potencia energía,energia,J,Registro gestor MATLAB,PLANIFICADA,No sustituir medición por simulación
+E-ERM-08,ERM,BANCO_ESTABILIDAD,Estabilidad 20 min,fallas/temperatura,-,Registro gestor MATLAB,PLANIFICADA,Condiciones del gestor histórico
+P25-B01,ELECTROMAGNETICO,BANCO_ELECTRICO,Verificación circuito y bobina,resistencia,ohm,ID provisional GitHub,PLANIFICADA,Cotejar Excel maestro
+P25-B02,ELECTROMAGNETICO,BANCO_ELECTRICO,Transitorios de activación y apagado,corriente/tiempo,A/ms,ID provisional GitHub,PLANIFICADA,No confundir simulación con medición
+P25-M01,ELECTROMAGNETICO,BANCO_MECANICO,Fuerza tangencial ON vs OFF,fuerza,N,ID provisional GitHub,PLANIFICADA,Banco con dinamómetro
+P25-M02,ELECTROMAGNETICO,BANCO_MECANICO,Retorno de tendón y resorte,desplazamiento,mm,ID provisional GitHub,PLANIFICADA,Revisar montaje real
+SMA-B01,SMA,BANCO_ELECTRICO,Resistencia del alambre por longitud,resistencia,ohm,ID provisional GitHub,PLANIFICADA,2.70 ohm dos puntas como antecedente
+SMA-B02,SMA,BANCO_TERMICO,Temperatura en activación y enfriamiento,temperatura,°C,ID provisional GitHub,PLANIFICADA,Ensayo fuera de piel
+SMA-B03,SMA,BANCO_MECANICO,Fuerza con restricción,fuerza,N,ID provisional GitHub,PLANIFICADA,Dinamómetro
+SMA-B04,SMA,BANCO_MECANICO,Desplazamiento contracción,desplazamiento,mm,ID provisional GitHub,PLANIFICADA,Precarga definida
+VR-TRACK,VR,INTEGRACION,Reconocimiento mano con y sin guante,estado_tracking,-,ID provisional GitHub,PLANIFICADA,Incidencia actual
+VR-UDP,VR,INTEGRACION,Comunicación Unity-ESP32 y actuación,latencia,ms,ID provisional GitHub,PLANIFICADA,Relojes y puntos de medición
+VR-RESP,VR,PERCEPCION,Tres respuestas ordinales por etapa,valor,1-3,ID provisional GitHub,PLANIFICADA,Semántica a validar en proyecto Unity

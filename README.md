@@ -1,79 +1,71 @@
 # HAPTIX
 
-**Guante háptico de dos dedos para comparación de actuadores — Tesis de Ingeniería Mecatrónica**
+**Diseño e implementación de un prototipo de guante háptico de dos dedos para la comparación de actuadores hápticos en aplicaciones portátiles**
 
-Pontificia Universidad Javeriana · Estado de documentación: **21 de noviembre de 2026** · Versión de repositorio: **v0.0.3 (preparado para publicación)**.
+Proyecto de grado · Ingeniería Mecatrónica · Pontificia Universidad Javeriana.
 
-> Proyecto: "Diseño e implementación de un prototipo de guante háptico de dos dedos para la comparación de actuadores hápticos en aplicaciones portátiles". El nombre **HAPTIX** identifica el repositorio; el título académico de la tesis se conserva sin modificaciones.
+> **Estado:** repositorio de trabajo en desarrollo. Los archivos de simulación, diseños CAD y documentación se encuentran en distintos grados de verificación. La existencia de un archivo no demuestra que una prueba se haya ejecutado o aprobado.
 
-## Objetivo
+## ¿Qué es HAPTIX?
 
-Conservar y explicar el desarrollo de un guante háptico de pulgar e índice y los bancos de evaluación de **tres tecnologías**: **motor de masa excéntrica (ERM)**, **freno electromagnético P25/11** y **alambre de Nitinol (SMA)**. El entorno de realidad virtual utiliza seguimiento de manos en Meta Quest 3S, aplicación Unity y comunicación con ESP32. No todas las tecnologías comparten el mismo nivel de integración: la SMA se mantiene como desarrollo/ensayo de banco.
+HAPTIX documenta un prototipo de guante háptico para **pulgar e índice**, su electrónica, mecánica, aplicación de realidad virtual y evaluación comparativa de tres tecnologías:
 
-**La documentación no implica que los tres actuadores estén integrados y validados en VR.** El guante físico se documenta como montaje de configuración fija; no se atribuye modularidad no implementada.
+- **ERM:** motores de masa excéntrica para estímulos vibratorios.
+- **Freno electromagnético P25/11:** resistencia al movimiento mediante tendón, fleje y resorte de retorno.
+- **SMA/Nitinol:** estudio electrotérmico y ensayos de banco; **no se declara integración validada al guante**.
 
-## Qué contiene esta versión
+El sistema VR utiliza Meta Quest 3S, seguimiento de manos, Unity, comunicación UDP y ESP32. Hay un problema abierto de reconocimiento de mano con el guante físico, por lo que no se declara validación integral cerrada.
 
-| Área | Material realmente incorporado | Estado de verificación |
-|---|---|---|
-| [Mecánica y CAD](hardware/mecanica/README.md) | Ensamble Fusion `.f3z`, modelos de índice y pulgar `.f3d`, fleje `.f3d` | Originales de Drive; comprobar contra guante fabricado |
-| [SMA](simulaciones/sma/README.md) | 2 scripts MATLAB, verificación Python, fundamento y guía | Modelo teórico; sin validación térmica sobre el montaje |
-| [P25/11](simulaciones/p25/README.md) | 4 circuitos `.asc`, postproceso MATLAB, CSV y 2 figuras | Procedencia conservada; valores teóricos/hipótesis a distinguir |
-| [ERM](simulaciones/erm/README.md) | Script MATLAB y documentación de simulación | Requiere dependencias y verificación de ejecución |
-| [Protocolo](protocolo/README.md) | Plantillas de corrida y estructura de pruebas | **No es aún el Excel maestro más reciente** |
-| [Análisis CSV](scripts/analizar_corridas.py) | Analizador básico y pruebas unitarias | Pruebas automáticas locales ejecutadas |
-| [Firmware ESP32](firmware/esp32/README.md) | Estructura y criterios de integración | Sketch integrado definitivo pendiente de recuperar |
-| [Aplicación VR](vr/README.md) | Documentación de arquitectura y problema de hand tracking | Proyecto Unity/APK originales pendientes de recuperar |
+## Ir directamente a los ensayos
 
-Se incorporaron **20 archivos reales de Drive sin modificar sus bytes**. Para cada uno consta SHA-256 y origen en [el registro de importaciones](docs/importaciones_2026-11-21.csv). Los originales de Drive son la referencia principal.
+**[Protocolo de pruebas: índice general](protocolo/README.md)**
 
-## Arquitectura del sistema
+| Parte | Documentación disponible |
+|---|---|
+| ERM | [Procedimientos E-ERM-01 a E-ERM-08 y antecedentes](protocolo/erm/README.md) |
+| Freno electromagnético | [Caracterización eléctrica y mecánica](protocolo/electromagnetico/README.md) |
+| SMA | [Ensayos de banco: resistencia, temperatura, fuerza y desplazamiento](protocolo/sma/README.md) |
+| Entorno virtual | [Pruebas UDP, hand tracking y respuestas de las tareas](protocolo/vr/README.md) |
+| Evidencias | [Cómo relacionar una corrida con su fuente](protocolo/trazabilidad-de-evidencias.md) |
+| Comparación | [Criterios para evaluación de actuadores](docs/criterios-comparacion.md) |
+
+**Importante:** el Excel maestro `Protocolo_Pruebas_Guante_Haptico_COMPLETO_FINAL_20261121(1).xlsx` todavía **no ha sido importado ni auditado** aquí. Los documentos anteriores son una consolidación preliminar y **no sustituyen** ese original.
+
+## Otros materiales ya incorporados
+
+- [Diseño mecánico y CAD](hardware/mecanica/README.md): ensamble Fusion, piezas de pulgar/índice y fleje; verificar coincidencia con el prototipo fabricado.
+- [SMA — MATLAB y teoría](simulaciones/sma/README.md): scripts, verificación numérica y limitaciones.
+- [P25/11 — LTspice y MATLAB](simulaciones/p25/README.md): circuitos, postproceso, CSV y figuras de simulación.
+- [ERM — simulación](simulaciones/erm/README.md): script MATLAB y guía de origen.
+- [Firmware ESP32](firmware/esp32/README.md) y [entorno VR](vr/README.md): estructura documental; fuentes finales pendientes.
+- [Registro de importaciones de Drive con SHA-256](docs/importaciones_2026-11-21.csv): 20 archivos originales conservados byte a byte en la migración inicial.
+
+## Arquitectura conceptual
 
 ```mermaid
 flowchart LR
-  Q[Meta Quest 3S\nHand tracking] --> U[Unity / escenario VR]
-  U -->|Eventos UDP| E[ESP32]
-  E --> A[Accionamiento ERM]
+  Q[Meta Quest 3S: seguimiento de manos] --> U[Unity: eventos y tareas VR]
+  U -->|UDP| E[ESP32]
+  E --> A[ERM]
   E --> B[Freno electromagnético]
   B --> M[Tendón, fleje y resorte]
-  E --> S[Registro serial CSV]
-  U --> R[Datos de tarea y respuestas]
-  S --> C[Análisis comparativo]
-  R --> C
-  X[SMA / Nitinol] --> Y[Ensayos y simulaciones de banco]
-  Y --> C
+  E --> R[Registro de comandos y mediciones]
+  U --> D[Respuestas por etapa]
+  R --> C[Análisis comparativo]
+  D --> C
+  S[SMA: banco independiente] --> C
 ```
 
-Diagrama **conceptual**, no diagrama eléctrico ni evidencia de que la cadena funciona en el montaje actual. Persisten dificultades de reconocimiento de la mano con el guante instalado.
+Es un esquema funcional de referencia, no una prueba de integración completa.
 
-## Estado de publicación
+## Reproducibilidad y cautelas
 
-Este ZIP contiene un **repositorio Git local** listo para publicar, pero **aún no existe** el repositorio remoto en GitHub. La ruta de publicación está documentada en [Publicar HAPTIX desde GitHub Desktop](docs/publicar.md).
+No confundir simulaciones con mediciones. Las pruebas de fuerza, desplazamiento, temperatura y corriente requieren archivos originales, condiciones, instrumentos e incertidumbre. No se publican identificadores personales de participantes ni claves Wi-Fi. Antes de cambiar la visibilidad a pública hay que revisar permisos y derechos de material CAD, código y datos.
 
-## Accesos rápidos
+- [Estado del proyecto](docs/estado.md)
+- [Fuentes y procedencia](docs/fuentes.md)
+- [Plan de acción](docs/plan-accion.md)
+- [Política de seguridad](SECURITY.md)
 
-- [Estado y pendientes](docs/estado.md) · [Estado de publicación](docs/estado-publicacion.md) · [Plan de acción](docs/plan-accion.md) · [Backlog](docs/issues-iniciales.md)
-- [Actuadores](docs/actuadores/index.md) · [Arquitectura](docs/arquitectura.md)
-- [Electrónica/PCB](docs/electronica.md) · [Mecánica](docs/mecanica.md)
-- [Protocolo de pruebas](protocolo/README.md) · [Datos](datos/README.md)
-- [Inventario de fuentes](docs/fuentes.md) · [Publicar en GitHub](docs/publicar.md)
-
-## Ejecutar herramientas auxiliares
-
-```bash
-python -m unittest discover -s tests
-python scripts/analizar_corridas.py --carpeta RUTA_DE_CSV --salida resumen.json
-```
-
-Las simulaciones MATLAB y los esquemas LTspice **no se han ejecutado de nuevo durante esta importación**. Sus instrucciones originales están incluidas en cada carpeta; el resultado de un modelo no debe describirse como medida experimental.
-
-## Próximos hitos y política
-
-1. Recuperar el proyecto `VRRoom_fuente_20261118_1121.zip`, el sketch `ESP_UDP_receptor(1).ino` y el protocolo Excel maestro del 21-11-2026.
-2. Comprobar versiones de firmware, bibliotecas, pines físicos y formatos de mensajes; probar integración ERM/freno.
-3. Auditar las revisiones de PCB, consolidar resultados y adjuntar los ensayos de participantes **solo en formatos anonimizados y autorizados**.
-4. Comparar los CAD incorporados con el prototipo real antes de etiquetarlos como finales.
-
-**Privado por defecto.** No divulgar claves Wi-Fi, datos de participantes, consentimientos, material de terceros ni prototipos sin revisión. [Política de seguridad](SECURITY.md). Las licencias del proyecto están pendientes.
-
-Consulta también las [decisiones de alcance](docs/decisiones-proyecto.md).
+**Repositorio GitHub:** https://github.com/Juanleon-19/HAPTIX  
+**Estado de visibilidad observado el 21-11-2026:** privado; el propietario puede invitar colaboradores o cambiar la visibilidad en Settings.
