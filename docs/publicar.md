@@ -1,31 +1,24 @@
-# Publicación de HAPTIX en GitHub
+# Acceso y mantenimiento del repositorio HAPTIX
 
-**Estado al 21-11-2026:** esta carpeta contiene un repositorio Git **local** con un primer commit en la rama `main`. El repositorio remoto `Juanleon-19/HAPTIX` **todavía no existe**; el asistente verificó que el nombre no estaba ocupado en esa cuenta, pero la conexión actual no puede crear repositorios.
+**Repositorio remoto existente:** https://github.com/Juanleon-19/HAPTIX  
+**Rama principal:** `main`  
+**Visibilidad verificada:** privada (21-11-2026).
 
-## Opción principal: GitHub Desktop (recomendada)
+## Acceso a otras personas
 
-1. Descarga y **extrae** el archivo `HAPTIX-v0.0.3-git.zip` completo. La carpeta `HAPTIX` contiene la carpeta oculta `.git`. No borres esa carpeta.
-2. Abre GitHub Desktop con la cuenta `Juanleon-19` iniciada.
-3. Selecciona **File → Add local repository...**, elige la carpeta extraída `HAPTIX` y confirma.
-4. Verifica que muestre rama **main** y el commit inicial.
-5. Pulsa **Publish repository**. Usa el nombre **HAPTIX**, deja marcada la opción **Keep this code private**, y confirma **Publish Repository**.
-6. Comprueba que el repositorio aparece en GitHub y que están `README.md`, `docs/`, `firmware/`, `vr/`, `hardware/`, `simulaciones/` y `protocolo/`.
+- **Colaboradores concretos:** en GitHub → repositorio → Settings → Collaborators, invitar por nombre de usuario; deberán aceptar la invitación.
+- **Lectura pública:** después de auditar datos, derechos y archivos, ir a Settings → General → Danger Zone → Change repository visibility → Public. El enlace es el mismo, pero entonces cualquier persona podrá leer el historial público.
+- **Sitio tipo documentación:** se puede activar GitHub Pages/MkDocs más adelante para ofrecer una web académica. No hay un sitio Pages habilitado ni se afirma que exista ahora.
 
-La operación **Publish repository** crea el repositorio privado remoto **y envía el commit local**. No es necesario crear manualmente otro repositorio primero. **No hay ninguna publicación automática desde este ZIP**; requiere esta acción en GitHub Desktop.
+## Ya tienes GitHub Desktop conectado
 
-## Opción alternativa: terminal Git
+1. Selecciona el repositorio local HAPTIX.
+2. Usa `Fetch origin` y, si hay cambios remotos, `Pull origin`.
+3. Revisa las nuevas carpetas `protocolo/erm`, `protocolo/electromagnetico`, `protocolo/sma` y `protocolo/vr`.
+4. A partir de aquí realiza commits incrementales; evita subir archivos de gran tamaño, binarios sin trazabilidad, secretos o datos sensibles.
 
-Crea primero en https://github.com/new un repositorio **privado** de nombre `HAPTIX`, sin marcar inicialización con README, licencia o `.gitignore`.
+**No crees un segundo repositorio HAPTIX ni fuerces un push sobre main.**
 
-Desde la carpeta ya extraída `HAPTIX`, que trae `.git`:
+## Antes de hacerlo público
 
-```bash
-git remote add origin https://github.com/Juanleon-19/HAPTIX.git
-git push -u origin main
-```
-
-Si `origin` ya existe, inspecciona con `git remote -v` antes de modificarlo. No uses `git push --force` para esta migración.
-
-## Antes de habilitar visibilidad pública
-
-Revisar derechos de terceros, licencia, CAD, fotos, identificadores de participantes y registros con IP o contraseñas. El proyecto está diseñado para **visibilidad privada inicial**. El Excel maestro y el Unity VR completos no están en esta versión: constan como pendientes de importación, no deben simularse como presentes.
+Revisar datos de participantes, claves de Wi-Fi, vídeos, información privada, licencias, CAD de terceros y procedencia de archivos. El Excel maestro y el proyecto Unity integrado siguen pendientes de importación; su ausencia está documentada.
