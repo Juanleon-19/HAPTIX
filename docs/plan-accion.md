@@ -8,7 +8,7 @@
 - [x] Plantillas de corridas, fichas de prueba e incidencias.
 - [x] Analizador básico de CSV con pruebas unitarias.
 - [x] Comprobar disponibilidad de `Juanleon-19/HAPTIX` y crear historial Git local.
-- [ ] Publicar `HAPTIX` **privado** en GitHub desde GitHub Desktop (remoto no creado).
+- [x] Crear y publicar el remoto privado `Juanleon-19/HAPTIX` en GitHub.
 
 - [x] Incorporar 20 archivos originales de Drive (CAD, MATLAB, LTspice, figuras) y registrar hashes SHA-256.
 - [ ] Reproducir los modelos importados en sus aplicaciones nativas y revisar CAD físico.
@@ -20,12 +20,12 @@
 - [ ] Importar `ESP_UDP_receptor.ino` y los sketches ERM/freno **aprobados para banco**, en rutas independientes.
 - [ ] Fijar versión de firmware VR integrada, pines reales y tabla de mensajes.
 - [ ] Incorporar imágenes originales y un vídeo corto sin participantes identificables, si hay autorización.
-- [ ] Crear incidencia de *hand tracking* y documentar pruebas de visibilidad/oclusión.
+- [x] Documentar incidencia inicial de *hand tracking* en el protocolo VR; reproducir pruebas con evidencia aún pendiente.
 
 ## Fase 2 — Evidencia experimental
 
 - [ ] Incorporar la última versión única del protocolo Excel (o convertir hoja fuente a formato abierto si es viable).
-- [ ] Consolidar procedimientos ERM, freno P25/11 y SMA por separado.
+- [x] Publicar una primera versión documental de procedimientos ERM, freno P25/11, SMA y VR (no sustituye el Excel maestro).
 - [ ] Definir diccionario de datos y correspondencia de archivos de cada corrida.
 - [ ] Incorporar datos **anonimizados** y no editados; generar métricas con scripts versionados.
 - [ ] Revisar consistencia de unidades, equipos, calibración, condiciones, incertidumbre y fechas.
