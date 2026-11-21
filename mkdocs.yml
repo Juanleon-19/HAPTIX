@@ -1,0 +1,36 @@
+site_name: HAPTIX | Guante háptico de dos dedos
+site_description: Documentación y trazabilidad del prototipo de guante háptico
+site_url: ''
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Inicio: index.md
+  - Arquitectura: arquitectura.md
+  - Estado: estado.md
+  - Actuadores:
+      - Panorama: actuadores/index.md
+      - ERM: actuadores/erm.md
+      - Electromagnético: actuadores/electromagnetico.md
+      - SMA: actuadores/sma.md
+  - Electrónica: electronica.md
+  - Mecánica: mecanica.md
+  - VR y hand tracking: vr-y-handtracking.md
+  - Datos y seguridad: seguridad-datos.md
+  - Fuentes: fuentes.md
+  - Incorporación: incorporacion.md
+  - Plan de acción: plan-accion.md
+  - Incidencias iniciales: issues-iniciales.md
+  - Publicar en GitHub: publicar.md

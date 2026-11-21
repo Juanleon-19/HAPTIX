@@ -1,0 +1,13 @@
+prioridad,area,tarea,estado,criterio_de_cierre
+P0,VR,Hand tracking no reconoce guante,Pendiente,"Video/fotos autorizadas, mediciones y comparación"
+P0,VR,Importar VRRoom fuente 2026-11-18,Pendiente,Proyecto Unity abre y registra versión
+P0,Firmware,Importar sketch UDP ESP32 y congelar integración,Pendiente,Compila y prueba de banco
+P0,Protocolo,Incorporar Excel maestro 2026-11-21,Pendiente,Tabla de pestañas y diccionario de datos
+P1,Datos,Estandarizar telemetría y respuestas CSV,Pendiente,Corrida reproducible y columnas con unidades
+P1,Electrónica,Cotejar CAD eléctrico y PCB vigente,Pendiente,Esquema Gerber BOM GPIO y fotografías corresponden
+P1,Actuadores,Consolidar ERM / P25/11,Pendiente,Distinguir datos de banco y simulación
+P1,SMA,Incorporar ensayos de banco Nitinol,Pendiente,Geometrías y seguridad térmica medidas
+P2,Mecánica,Congelar CAD de guante fijo,Pendiente,CAD fotos fabricación coincidentes
+P2,Documentación,Incorporar figuras y análisis replicable,Pendiente,Script CSV cita versión y equipo
+P2,Gestión,Revisión de permisos y derechos,Pendiente,Licencias autorizaciones y política de datos
+P3,Publicación,Documentación MkDocs,Pendiente,Sitio verificado y autorización explícita

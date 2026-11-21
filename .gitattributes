@@ -1,0 +1,17 @@
+* text=auto
+*.md text eol=lf
+*.csv text eol=lf
+*.py text eol=lf
+*.ino text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.f3z binary
+*.f3d binary
+*.step binary
+*.stl binary
+
+# Fuentes importadas: conservar exactamente sus bytes originales
+simulaciones/** -text
+hardware/mecanica/fusion360/** -text
