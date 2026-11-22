@@ -1,5 +1,6 @@
 # Protocolo del freno electromagnético P25/11
 
+> **Actualización (Excel fuente aportado el 22-11-2026):** los estados del documento preliminar deben leerse junto al [catálogo de las 59 pruebas](../CATALOGO_EXCEL_20261122.md) y [resultados registrados](../RESULTADOS_REPORTADOS_20261122.md). Este documento conserva contexto histórico y propuestas, pero NO sustituye los campos originales de ese Excel.\n\n
 ## Arquitectura documentada
 
 El freno cinestésico usa un electroimán P25/11 y un **tendón con fleje y resorte de retorno**. Su funcionamiento mecánico se debe caracterizar independientemente de la respuesta eléctrica de la bobina. No asumir que la fuerza normal de atracción del electroimán es igual a la fuerza tangencial que percibe el dedo.

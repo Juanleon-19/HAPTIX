@@ -16,6 +16,15 @@ HAPTIX documenta un prototipo de guante háptico para **pulgar e índice**, su e
 
 El sistema VR utiliza Meta Quest 3S, seguimiento de manos, Unity, comunicación UDP y ESP32. Hay un problema abierto de reconocimiento de mano con el guante físico, por lo que no se declara validación integral cerrada.
 
+
+## Protocolo experimental recuperado (22-11-2026)
+
+**[Consultar las 59 pruebas del Excel adjunto](protocolo/CATALOGO_EXCEL_20261122.md)** · [Resultados de referencia y limitaciones](protocolo/RESULTADOS_REPORTADOS_20261122.md) · [Catálogo textual completo CSV](protocolo/catalogo_excel_fuente_20261122.csv).
+
+El Excel contiene **4 hojas** (VIRTUAL 27, ELECTRONICA 12, MECANICA 8, INTEGRADO 12) y **59 imágenes incrustadas**. Se han importado y documentado los **59 registros de las hojas** al repositorio en texto, conservando sus estados originales. **El XLSX binario de 36,36 MB con las imágenes todavía no está cargado en GitHub** y requiere incorporación desde GitHub Desktop. [Guía de carga sin modificar el archivo](protocolo/ORIGINAL_XLSX_PENDIENTE.md).
+
+El contenido documenta corridas C001/C003/C005 para ERM/freno, ensayos térmicos del SMA fuera del guante, una prueba de texturas no superada y una identificación I²C no conforme. No presentar todos los estados «Listo» como validación independiente.
+
 ## Ir directamente a los ensayos
 
 **[Protocolo de pruebas: índice general](protocolo/README.md)**

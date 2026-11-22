@@ -1,5 +1,6 @@
 # Protocolo VR, comunicación y experiencia
 
+> **Actualización (Excel fuente aportado el 22-11-2026):** los estados del documento preliminar deben leerse junto al [catálogo de las 59 pruebas](../CATALOGO_EXCEL_20261122.md) y [resultados registrados](../RESULTADOS_REPORTADOS_20261122.md). Este documento conserva contexto histórico y propuestas, pero NO sustituye los campos originales de ese Excel.\n\n
 ## Sistema y condición crítica
 
 Meta Quest 3S → hand tracking → aplicación Unity → comandos UDP → ESP32 → actuación ERM/freno electromagnético. Existe una **incidencia abierta de reconocimiento de manos con el guante colocado**; no presentar la integración como validada sin resolverla.

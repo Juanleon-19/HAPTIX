@@ -1,5 +1,6 @@
 # Protocolo ERM — evidencia histórica y procedimientos
 
+> **Actualización (Excel fuente aportado el 22-11-2026):** los estados del documento preliminar deben leerse junto al [catálogo de las 59 pruebas](../CATALOGO_EXCEL_20261122.md) y [resultados registrados](../RESULTADOS_REPORTADOS_20261122.md). Este documento conserva contexto histórico y propuestas, pero NO sustituye los campos originales de ese Excel.\n\n
 ## Sistema
 
 Motores ERM controlados por módulos hápticos sobre bus I²C, con selección de cuatro canales mediante multiplexor (dirección observada `0x70`). En el registro de diagnóstico consultado se reportaron respuestas en `0x5A` y se usaron consignas RTP. La identidad de los módulos **no fue uniforme** en los ensayos históricos.
