@@ -1,5 +1,6 @@
-# Protocolo de pruebas de HAPTIX
+| `Protocolo_de_pruebas_guante_haptico(1).xlsx` (aportado 22-11-2026) | **59 registros importados a CSV y Markdown; binario pendiente** | Referencia más reciente disponible, a cotejar con corridas originales |# Protocolo de pruebas de HAPTIX
 
+> **NUEVA FUENTE INCORPORADA EL 22-11-2026:** [Excel recuperado: catálogo de 59 ensayos](CATALOGO_EXCEL_20261122.md), [texto completo de las cuatro hojas en CSV](catalogo_excel_fuente_20261122.csv) y [resultados reportados](RESULTADOS_REPORTADOS_20261122.md). El XLSX binario con 59 imágenes **todavía no está alojado en GitHub**; [guía de carga](ORIGINAL_XLSX_PENDIENTE.md). Los estados en el Excel son la referencia documental más reciente aportada, pero requieren revisar los datos brutos externos.\n\n
 Esta carpeta es la puerta de entrada al **trabajo experimental**. Se documenta lo conocido del desarrollo sin modificar el protocolo Excel maestro ni atribuir resultados que no se han comprobado. **Estado del índice: 21-11-2026.**
 
 ## Fuentes y estado

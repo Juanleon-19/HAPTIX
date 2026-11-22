@@ -1,5 +1,6 @@
 # Protocolo SMA — Nitinol en banco de pruebas
 
+> **Actualización (Excel fuente aportado el 22-11-2026):** los estados del documento preliminar deben leerse junto al [catálogo de las 59 pruebas](../CATALOGO_EXCEL_20261122.md) y [resultados registrados](../RESULTADOS_REPORTADOS_20261122.md). Este documento conserva contexto histórico y propuestas, pero NO sustituye los campos originales de ese Excel.\n\n
 ## Alcance y estado
 
 La evaluación SMA es una línea de desarrollo **de banco**, no una integración térmicamente validada en el guante. Se estudia alambre NiTi y geometrías recta, zigzag y X-crossing como posibilidades de fabricación. No afirmar que todas fueron ensayadas.
