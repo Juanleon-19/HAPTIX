@@ -1,0 +1,14 @@
+﻿Prueba,Actuador,Variable,Valor,Unidad,Fuente_y_alcance
+M-01,FRENO,Fuerza máxima observada,5,N,"Dinamómetro MARK-10, reportado durante ensayo"
+M-03,FRENO,Deslizamiento residual a aproximadamente 5 N,1,mm/s,Valor aproximado de ensayo
+M-04,FRENO,Temperatura inicial,18,°C,Ensayo térmico de P25
+M-04,FRENO,Temperatura máxima,25,°C,Ensayo térmico de P25
+M-05,SMA,Fuerza a 1 A,17,N,"Dinamómetro, reportado durante ensayo"
+M-07,SMA,Temperatura a 1 A,66,°C,"Cámara termográfica, reportado durante ensayo"
+M-05,SMA,Fuerza a 2 A,17,N,"Dinamómetro, reportado durante ensayo"
+M-07,SMA,Temperatura a 2 A,144,°C,"Cámara termográfica, reportado durante ensayo"
+M-07,SMA,Temperatura a 3 A,>270,°C,"Valor sobre rango informado, sin lectura de fuerza válida"
+M-06,SMA,Contracción a 1 A,2.35,mm,Valor aproximado de ensayo
+E-P25-03,FRENO,Tensión bobina,11.83,V,Registro eléctrico anterior
+E-P25-03,FRENO,Corriente bobina,0.220,A,Registro eléctrico anterior
+E-P25-04,FRENO,Separación de cursores de osciloscopio,676,ms,Intervalo eléctrico; no latencia física completa
